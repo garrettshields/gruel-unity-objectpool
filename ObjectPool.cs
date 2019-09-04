@@ -54,7 +54,7 @@ namespace Gruel.ObjectPool {
 			// Destroy all poolable objects of this type.
 			var list = _poolComplete[hash];
 			for (int i = 0, n = list.Count; i < n; i++) {
-				list[i].Destroy();
+				list[i]?.Destroy();
 			}
 
 			// Remove this hash from the dictionaries.
